@@ -1,0 +1,535 @@
+body {
+    font-family: 'Microsoft JhengHei', 'Microsoft YaHei', 'STHeiti SC', 'SimHei';
+    font-size: 16px;
+}
+// 首页
+.home {
+    background: url('../img/homeBg.png') no-repeat right center;
+    background-color: #2b3340;
+    opacity: 0.8;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    .homeTitle {
+        width: 1100px;
+        height: 100%;
+        margin: 0 auto;
+        background: url('../img/homeTitle.png') no-repeat left center;
+    }
+}
+// 个人简介
+.info {
+    width: 100%;
+    height: 100%;
+    .nameApply {
+        color: rgb(211,211,211);
+        height: 88px;
+        width: 100%;
+        background-color: #2c3c51;
+        font-size: 30px;
+        line-height: 88px;
+        .name {
+            width: 55%;
+            float: left;
+            margin-left: 5%;
+        }
+    }
+    .am {
+        font-size: 28px;
+        margin: 30px 0 30px 5%;
+    }
+    // 教育背景
+    .infoDetil {
+        line-height: 40px;
+        position: absolute;
+        left: 5%;
+        top: 30%;
+        font-size: 16px;
+        ul li {
+            width: 450px;
+            border-bottom: 1px dashed #FFF;
+            padding-top: 10px;
+            span {
+                font-size: 18px;
+                color: #fa6855;
+            }
+        }
+    }
+    // 奖项
+    .leaderboard {
+        position: absolute;
+        right: 18%;
+        top: 28%;
+        width: 300px;
+        height: 308px;
+        background: -webkit-linear-gradient(top, #3a404d, #181c26);
+        background: linear-gradient(to bottom, #3a404d, #181c26);
+        border-radius: 10px;
+        box-shadow: 0 7px 30px rgba(62, 9, 11, 0.3);
+        h1 {
+            font-size: 20px;
+            color: #e1e1e1;
+            padding: 12px 13px 18px;
+        }
+        ol {
+            counter-reset: leaderboard;
+            li {
+                list-style: none;
+                position: relative;
+                z-index: 1;
+                font-size: 14px;
+                counter-increment: leaderboard;
+                padding: 18px 10px 18px 50px;
+                cursor: pointer;
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+                -webkit-transform: translateZ(0) scale(1, 1);
+                transform: translateZ(0) scale(1, 1);
+                mark {
+                    position: absolute;
+                    z-index: 2;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    padding: 18px 10px 18px 50px;
+                    margin: 0;
+                    background: none;
+                    color: #fff;
+                }
+                mark::before,
+                mark::after {
+                    content: '';
+                    position: absolute;
+                    z-index: 1;
+                    bottom: -11px;
+                    left: -9px;
+                    border-top: 10px solid #c24448;
+                    border-left: 10px solid transparent;
+                    -webkit-transition: all 0.1s ease-in-out;
+                    transition: all 0.1s ease-in-out;
+                    opacity: 0;
+                }
+                mark::after {
+                    left: auto;
+                    right: -9px;
+                    border-left: none;
+                    border-right: 10px solid transparent;
+                }
+                small {
+                    position: relative;
+                    z-index: 2;
+                    display: block;
+                    text-align: right;
+                }
+            }
+            li::before {
+                content: counter(leaderboard);
+                position: absolute;
+                z-index: 2;
+                top: 15px;
+                left: 15px;
+                width: 20px;
+                height: 20px;
+                line-height: 20px;
+                color: #c24448;
+                background: #fff;
+                border-radius: 20px;
+                text-align: center;
+            }
+            li::after {
+                content: '';
+                position: absolute;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: #fa6855;
+                box-shadow: 0 3px 0 rgba(0, 0, 0, 0.08);
+                -webkit-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+                opacity: 0;
+            }
+            li:nth-child(1) {
+                background: #fa6855;
+            }
+            li:nth-child(1)::after {
+                background: #fa6855;
+            }
+            li:nth-child(2) {
+                background: #e0574f;
+            }
+            li:nth-child(2)::after {
+                background: #e0574f;
+                box-shadow: 0 2px 0 rgba(0, 0, 0, 0.08);
+            }
+            li:nth-child(2) mark::before,
+            li:nth-child(2) mark::after {
+                border-top: 6px solid #ba4741;
+                bottom: -7px;
+            }
+            li:nth-child(3) {
+                background: #d7514d;
+            }
+            li:nth-child(3)::after {
+                background: #d7514d;
+                box-shadow: 0 1px 0 rgba(0, 0, 0, 0.11);
+            }
+            li:nth-child(3) mark::before,
+            li:nth-child(3) mark::after {
+                border-top: 2px solid #b0433f;
+                bottom: -3px;
+            }
+            li:nth-child(4) {
+                background: #cd4b4b;
+            }
+            li:nth-child(4)::after {
+                background: #cd4b4b;
+                box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.15);
+            }
+            li:nth-child(4) mark::before,
+            li:nth-child(4) mark::after {
+                border-top: 2px solid #b0433f;
+                bottom: -3px;
+                top: -7px;
+                bottom: auto;
+                border-top: none;
+                border-bottom: 6px solid #a63d3d;
+            }
+            li:nth-child(5) {
+                background: #c24448;
+                border-radius: 0 0 10px 10px;
+            }
+            li:nth-child(5)::after {
+                background: #c24448;
+                box-shadow: 0 -2.5px 0 rgba(0, 0, 0, 0.12);
+                border-radius: 0 0 10px 10px;
+            }
+            li:nth-child(5) mark::before,
+            li:nth-child(5) mark::after {
+                top: -9px;
+                bottom: auto;
+                border-top: none;
+                border-bottom: 8px solid #993639;
+            }
+            li:hover {
+                z-index: 2;
+                overflow: visible;
+            }
+            li:hover::after {
+                opacity: 1;
+                -webkit-transform: scaleX(1.06) scaleY(1.03);
+                transform: scaleX(1.06) scaleY(1.03);
+            }
+            li:hover mark::before,
+            li:hover mark::after {
+                opacity: 1;
+                -webkit-transition: all 0.35s ease-in-out;
+                transition: all 0.35s ease-in-out;
+            }
+        }
+    }
+    // 长城
+    .ss-style-boxes {
+        position: absolute;
+        background-image: linear-gradient(to right, #0ca2ba 50%, #2c3e50 50%);
+        background-size: 130px 100%;
+        bottom: 1em;
+        height: 2.5em;
+        left: 0;
+        width: 100%;
+    }
+    .footAdd {
+        position: absolute;
+        height: 1em;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        background: #2c3e50;
+    }
+}
+// 主标题与副标题
+.zbt,
+.fbt {
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    line-height: 50px;
+    color: #CF2782;
+}
+.zbt {
+    color: #181C26;
+    font-weight: bold;
+    margin-top: 20px;
+}
+//技能掌握
+.cd-section .skill {
+    height: 100%;
+    width: 100%;
+    background-color: #d7dbdb;
+    #circleText {
+        width: 420px;
+        height: 420px;
+        position: absolute;
+        left: 3%;
+        top: 25%;
+    }
+    .skillLIst {
+        width: 60%;
+        position: absolute;
+        right: -5%;
+        top: 25%;
+        ul.list li {
+            list-style: circle;
+            font-size: 14px;
+            line-height: 20px;
+            color: #181C26;
+            margin-left: 20px;
+        }
+        .tech-skill-list__item {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .tech-skill-list__item-html-and-css {
+            width: 80%;
+        }
+        .tech-skill-list__item-javascript {
+            width: 70%;
+        }
+        .tech-skill-list__item-bs {
+            width: 60%;
+        }
+        .tech-skill-list__item-java {
+            width: 55%;
+        }
+        .tech-skill-list__item-ajax {
+            width: 45%;
+        }
+        .tech-skill-list__item-sql {
+            width: 40%;
+        }
+        .tech-skill-list__item-photoshop {
+            width: 30%;
+        }
+        .tech-skill-list__item__name {
+            height: 40px;
+            line-height: 40px;
+            padding-left: 10px;
+            overflow: hidden;
+            border-left: 3px solid;
+            color: #ff742a;
+            background-color: #fff6dd;
+            border-color: #fdbc40;
+        }
+        .tech-skill-list__item--practised .tech-skill-list__item__name {
+            color: #6e9c0f;
+            background-color: #eaf6d0;
+            border-color: #80bd01;
+        }
+        .tech-skill-list__item--mastered .tech-skill-list__item__name {
+            color: #2a7da9;
+            background-color: #d6efff;
+            border-color: #3498db;
+        }
+        .tech-skill-list__item__detail {
+            position: absolute;
+            left: 150px;
+            top: 12px;
+            z-index: 9999;
+            max-width: 350px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+            display: none;
+        }
+        @media (max-width: 749px) {
+            .tech-skill-list__item {
+                margin-bottom: 15px;
+            }
+        }
+        @media (min-width: 750px) {
+            .tech-skill-list__item {
+                margin-bottom: 20px;
+            }
+            .tech-skill-list__item:hover .tech-skill-list__item__detail {
+                display: block;
+            }
+        }
+    }
+}
+.experience {
+    width: 100%;
+    height: 100%;
+}
+.experienceList {
+    position: relative;
+    left: 20%;
+    width: 800px;
+    .rect {
+        position: absolute;
+        width: 5px;
+        height: 490px;
+        background-color: #CF2782;
+        left: 30px;
+    }
+    li {
+        height: 130px;
+        margin: 30px 0;
+    }
+    .time {
+        position: absolute;
+        font-size: 20px;
+        left: -150px;
+        color: #181C26;
+    }
+    .point {
+        position: absolute;
+        font-size: 28px;
+        left: 18px;
+        color: #CF2782;
+        font-weight: bold;
+    }
+    .list {
+        position: absolute;
+        left: 80px;
+        .gs {
+            font-size: 24px;
+            margin-bottom: 18px;
+            color: #181C26;
+            span {
+                float: right;
+            }
+        }
+        .jl {
+            line-height: 22px;
+        }
+    }
+}
+// 个人作品
+.demoShow {
+    width: 100%;
+    height: 100%;
+}
+
+
+// 个人能力与自我评价
+.personSkill {
+    height: 100%;
+    width: 100%;
+    header.title {
+        margin-left: 3%;
+        font-size: 22px;
+        font-weight: bold;
+        color: #C23531;
+        line-height: 30px;
+        margin-top: 30px;
+    }
+    #echart {
+        position: absolute;
+        right: 3%;
+        top: 120px;
+    }
+    .pj {
+        ol {
+            counter-reset: li;
+            font-size: 18px;
+            line-height: 30px;
+            li {
+                margin-left: 3%;
+                margin-bottom: 20px;
+                width: 700px;
+                border-bottom: 0.1em dashed coral;
+                &.first {
+                    margin-top: 15px;
+                }
+                &::before {
+                    content: counter(li);
+                    /*计算li元素的个数*/
+                    counter-increment: li;
+                    /*自动添加数值*/
+                    margin-right: 1em;
+                    margin-left: -.5em;
+                    padding: 0.55em 0.9em;
+                    width: 1.5em;
+                    background-color: coral;
+                    border-bottom-left-radius: 0.6em;
+                    border-top-left-radius: 0.6em;
+                }
+            }
+        }
+    }
+}
+// 联系我
+.contactMe {
+    width: 100%;
+    height: 100%;
+    // 视频
+    #myVideo {
+       border: 5px solid #5F9EA0; 
+       padding: 3px;
+       width: 60%;
+       left: 10%;
+       margin-top:30px ;
+       margin-left:5% ;
+    }
+    
+    // 联系方式
+    .lxfs {
+        position: absolute;
+        right: 10%;
+        border: 5px solid #5F9EA0;
+        width: 23%;
+        height: 72%;
+        color: #181C26;
+        top: 150px;
+        header {
+            font-size: 30px;
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            background-color:#5F9EA0 ;
+        }
+        ul>li {
+            line-height: 45px;
+            margin-left: 30px;
+            font-size: 18px;
+        }
+        .chatLogo {
+            margin-top: 20px;
+            width: 100%;
+            text-align: center;
+            img {
+                margin: 3px;
+                &:hover {
+                    cursor: pointer;
+                    transform:rotate(360deg);
+                    -ms-transform:rotate(360deg);     /* IE 9 */
+                    -moz-transform:rotate(360deg);    /* Firefox */
+                    -webkit-transform:rotate(360deg); /* Safari 和 Chrome */
+                    -o-transform:rotate(360deg); 
+                    -webkit-transition: -webkit-transform 0.6s ease-out; 
+                    -moz-transition: -moz-transform 0.6s ease-out; 
+                    transition: transform 0.6s ease-out; 
+                }
+            }
+        }
+        
+        #download {
+            position: absolute;
+            bottom: 30px;
+            font-size: 30px;
+            height: 50px;
+            line-height: 50px;
+            padding: 0 18px;
+            color: #F9F7F6;
+            background-color:#5F9EA0 ;
+            left: 50%;
+            margin-left: -80px;
+            cursor: pointer;
+        }
+    }
+    
+}
