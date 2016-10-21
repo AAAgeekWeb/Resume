@@ -20,29 +20,37 @@ body {
   width: 100%;
   height: 100%;
 }
+.info .infoContainer {
+  width: 1360px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
 .info .nameApply {
-  color: #d3d3d3;
-  height: 88px;
+  color: #fff;
+  height: 80px;
   width: 100%;
   background-color: #2c3c51;
-  font-size: 30px;
-  line-height: 88px;
+  font-size: 28px;
+  line-height: 80px;
 }
 .info .nameApply .name {
-  width: 55%;
+  width: 40%;
   float: left;
-  margin-left: 5%;
+  margin-left: 10%;
 }
 .info .am {
   font-size: 28px;
-  margin: 30px 0 30px 5%;
+  margin-left: 8%;
+  line-height: 60px;
+  color: #DEB887;
 }
 .info .infoDetil {
   line-height: 40px;
   position: absolute;
-  left: 5%;
-  top: 30%;
+  left: 10%;
   font-size: 16px;
+  color: #D6EFFF;
 }
 .info .infoDetil ul li {
   width: 450px;
@@ -51,14 +59,15 @@ body {
 }
 .info .infoDetil ul li span {
   font-size: 18px;
-  color: #fa6855;
+  color: #C23531;
+  font-weight: 800;
+  margin-right: 10px;
 }
 .info .leaderboard {
   position: absolute;
-  right: 18%;
-  top: 28%;
-  width: 300px;
-  height: 308px;
+  right: 16%;
+  width: 360px;
+  height: 408px;
   background: -webkit-linear-gradient(top, #3a404d, #181c26);
   background: linear-gradient(to bottom, #3a404d, #181c26);
   border-radius: 10px;
@@ -151,10 +160,10 @@ body {
   opacity: 0;
 }
 .info .leaderboard ol li:nth-child(1) {
-  background: #fa6855;
+  background: #FF7F50;
 }
 .info .leaderboard ol li:nth-child(1)::after {
-  background: #fa6855;
+  background: #FF7F50;
 }
 .info .leaderboard ol li:nth-child(2) {
   background: #e0574f;
@@ -198,7 +207,6 @@ body {
 }
 .info .leaderboard ol li:nth-child(5) {
   background: #c24448;
-  border-radius: 0 0 10px 10px;
 }
 .info .leaderboard ol li:nth-child(5)::after {
   background: #c24448;
@@ -207,6 +215,36 @@ body {
 }
 .info .leaderboard ol li:nth-child(5) mark::before,
 .info .leaderboard ol li:nth-child(5) mark::after {
+  top: -9px;
+  bottom: auto;
+  border-top: none;
+  border-bottom: 8px solid #993639;
+}
+.info .leaderboard ol li:nth-child(6) {
+  background: #2D93CA;
+}
+.info .leaderboard ol li:nth-child(6)::after {
+  background: #2D93CA;
+  box-shadow: 0 -2.5px 0 rgba(0, 0, 0, 0.12);
+}
+.info .leaderboard ol li:nth-child(6) mark::before,
+.info .leaderboard ol li:nth-child(6) mark::after {
+  top: -9px;
+  bottom: auto;
+  border-top: none;
+  border-bottom: 8px solid #993639;
+}
+.info .leaderboard ol li:nth-child(7) {
+  background: #2A7DA9;
+  border-radius: 0 0 10px 10px;
+}
+.info .leaderboard ol li:nth-child(7)::after {
+  background: #2A7DA9;
+  box-shadow: 0 -2.5px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 0 0 10px 10px;
+}
+.info .leaderboard ol li:nth-child(7) mark::before,
+.info .leaderboard ol li:nth-child(7) mark::after {
   top: -9px;
   bottom: auto;
   border-top: none;
@@ -263,11 +301,11 @@ body {
   background-color: #d7dbdb;
 }
 .cd-section .skill #circleText {
-  width: 420px;
-  height: 420px;
+  width: 450px;
+  height: 450px;
   position: absolute;
-  left: 3%;
-  top: 25%;
+  left: 5%;
+  top: 23%;
 }
 .cd-section .skill .skillLIst {
   width: 60%;
@@ -358,19 +396,20 @@ body {
 }
 .experienceList {
   position: relative;
-  left: 20%;
-  width: 800px;
+  left: 50%;
+  margin-left: -400px;
+  width: 880px;
 }
 .experienceList .rect {
   position: absolute;
   width: 5px;
-  height: 490px;
+  height: 480px;
   background-color: #CF2782;
   left: 30px;
 }
 .experienceList li {
   height: 130px;
-  margin: 30px 0;
+  margin: 40px 0;
 }
 .experienceList .time {
   position: absolute;
@@ -390,36 +429,212 @@ body {
   left: 80px;
 }
 .experienceList .list .gs {
-  font-size: 24px;
-  margin-bottom: 18px;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 12px;
   color: #181C26;
+}
+.experienceList .list .gs a {
+  color: #181C26;
+}
+.experienceList .list .gs a:hover {
+  color: #CF2782;
 }
 .experienceList .list .gs span {
   float: right;
 }
 .experienceList .list .jl {
-  line-height: 22px;
+  line-height: 24px;
+  padding-bottom: 16px;
+  color: #F9F9F9;
 }
 .demoShow {
   width: 100%;
   height: 100%;
 }
+.demoShow .row {
+  width: 1360px;
+  color: #000;
+  margin: 30px auto;
+}
+.demoShow .single-member {
+  width: 310px;
+  float: left;
+  margin: 30px 5%;
+  background-color: #fff;
+  text-align: center;
+  position: relative;
+}
+.demoShow .member-image img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+.demoShow h3 {
+  font-size: 26px;
+  font-weight: normal;
+  margin: 16px 0 0;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.demoShow h5 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 15px;
+  line-height: 28px;
+  color: #D57744;
+}
+.demoShow p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+  text-align: left;
+  padding: 0 30px;
+  margin-bottom: 10px;
+}
+.demoShow .fb-touch {
+  background-position: 0 0;
+}
+.demoShow .tweet-touch {
+  background-position: -35px 0;
+}
+.demoShow .linkedin-touch {
+  background-position: -71px 0;
+}
+/*= effect-7 css =*/
+.demoShow .effect-7 {
+  max-height: 360px;
+  min-height: 360px;
+  overflow: hidden;
+}
+.demoShow .effect-7 h3 {
+  line-height: 35px;
+}
+.demoShow .effect-7 .member-image {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  transition: 0.4s;
+  z-index: 1;
+}
+.demoShow .effect-7 .member-image img {
+  width: 100%;
+  transition: 0.4s;
+  opacity: 1;
+  height: 100%;
+}
+.demoShow .effect-7 .more-info {
+  height: 208px;
+  transition: 0.4s;
+  overflow: hidden;
+  position: relative;
+  background-color: #fff;
+}
+.demoShow .effect-7:hover .member-image {
+  bottom: 40%;
+}
+.demoShow .effect-7:hover .member-image img {
+  width: 0;
+  height: 0;
+  transition: 0.4s;
+  opacity: 0;
+}
+/*= effect-8 css =*/
+.demoShow .effect-8 {
+  max-height: 360px;
+  min-height: 360px;
+  overflow: hidden;
+  perspective: 800px;
+}
+.demoShow .effect-8 h3 {
+  line-height: 35px;
+}
+.demoShow .effect-8 .member-image {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  transition: 0.4s;
+  z-index: 1;
+}
+.demoShow .effect-8 .member-image img {
+  width: 100%;
+  transition: 0.4s;
+  height: 100%;
+}
+.demoShow .effect-8 .more-info {
+  height: 208px;
+  transition: 0.4s;
+  overflow: hidden;
+  position: relative;
+  background-color: #fff;
+}
+.demoShow .effect-8:hover .member-image {
+  transform: rotateX(82deg);
+  transform-origin: center bottom 0;
+  transition: 0.4s;
+}
+/*= effect-9 css =*/
+.demoShow .effect-9 {
+  max-height: 360px;
+  min-height: 360px;
+  overflow: hidden;
+  perspective: 800px;
+}
+.demoShow .effect-9 h3 {
+  line-height: 35px;
+}
+.demoShow .effect-9 .member-image {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  transition: 0.4s;
+  z-index: 1;
+}
+.demoShow .effect-9 .member-image img {
+  width: 100%;
+  transition: 0.4s;
+  height: 100%;
+}
+.demoShow .effect-9 .more-info {
+  height: 208px;
+  transition: 0.4s;
+  overflow: hidden;
+  position: relative;
+  background-color: #fff;
+}
+.demoShow .effect-9:hover .member-image {
+  transform: translateY(100%);
+  transition: 0.4s;
+}
 .personSkill {
   height: 100%;
   width: 100%;
 }
+.personSkill .psContainer {
+  height: 100%;
+  width: 1350px;
+  margin: 0 auto;
+  position: relative;
+}
 .personSkill header.title {
-  margin-left: 3%;
+  margin-left: 5%;
   font-size: 22px;
   font-weight: bold;
   color: #C23531;
   line-height: 30px;
   margin-top: 30px;
+  margin-bottom: 20px;
 }
-.personSkill #echart {
+.personSkill .echartContainer {
   position: absolute;
-  right: 3%;
-  top: 120px;
+  right: 4%;
+  top: 0;
+}
+.personSkill .echartContainer .echartTitle {
+  position: absolute;
+  left: 40%;
+  font-size: 24px;
+  font-weight: bold;
+  color: #C23531;
 }
 .personSkill .pj ol {
   counter-reset: li;
@@ -455,17 +670,17 @@ body {
 .contactMe #myVideo {
   border: 5px solid #5F9EA0;
   padding: 3px;
-  width: 60%;
+  height: 70%;
   left: 10%;
   margin-top: 30px;
   margin-left: 5%;
 }
 .contactMe .lxfs {
   position: absolute;
-  right: 10%;
+  right: 8%;
   border: 5px solid #5F9EA0;
   width: 23%;
-  height: 72%;
+  height: 70%;
   color: #181C26;
   top: 150px;
 }
@@ -493,9 +708,12 @@ body {
 .contactMe .lxfs .chatLogo img:hover {
   cursor: pointer;
   transform: rotate(360deg);
-  -ms-transform: rotate(360deg);/* IE 9 */
-  -moz-transform: rotate(360deg);/* Firefox */
-  -webkit-transform: rotate(360deg);/* Safari 和 Chrome */
+  -ms-transform: rotate(360deg);
+  /* IE 9 */
+  -moz-transform: rotate(360deg);
+  /* Firefox */
+  -webkit-transform: rotate(360deg);
+  /* Safari 和 Chrome */
   -o-transform: rotate(360deg);
   -webkit-transition: -webkit-transform 0.6s ease-out;
   -moz-transition: -moz-transform 0.6s ease-out;

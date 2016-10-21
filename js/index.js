@@ -3,8 +3,8 @@
 	//创建舞台
 	var stage = new Konva.Stage({
 		container: 'circleText',
-		width: 420,
-		height: 420
+		width: 450,
+		height: 450
 	});
 
 	//创建层
@@ -18,8 +18,8 @@
 	stage.add(bgLayer);
 
 	//绘制背景
-	var innerRadius = 100; //内环的半径
-	var outerRadius = 160; // 外环的半径
+	var innerRadius = 110; //内环的半径
+	var outerRadius = 180; // 外环的半径
 
 	// 创建背景内环虚线圆
 	var innerCircle = new Konva.Circle({
@@ -92,7 +92,7 @@
 		y: innerRadius * Math.sin(120 * Math.PI / 180), //文本圆的y坐标
 		innerRadius: 32, // 内圆半径
 		outerRadius: 33, // 外圆半径
-		innerStyle: '#BAE8C4', //内部填充样式
+		innerStyle: '#F06A59', //内部填充样式
 		outerStyle: '#E8F2F0', //外圆的样式
 		text: 'java' // 内圆的文本
 	});
@@ -422,7 +422,7 @@
 			title: "扫一扫，添加我为QQ好友",
 			type: 1,
 			shadeClose: true, //点击遮罩关闭
-			area:'302px',
+			area: '302px',
 			content: '\<\img src="img/qqCode.png"/>'
 		});
 	}
@@ -430,10 +430,23 @@
 		layer.open({
 			title: "扫一扫，添加我为微信好友",
 			type: 1,
-			shadeClose: true, 
-			area:'302px',
+			shadeClose: true,
+			area: '302px',
 			content: '\<\img src="img/wxCode.png"/>'
 		});
 	}
 
+	$('.container').on('click', function() {
+		$('.menu').toggleClass('expanded');
+		$('span').toggleClass('hidden');
+		$('.container , .toggle').toggleClass('close');
+	});
+
+	window.onbeforeunload = function(){
+		alert(1);
+		$('.menu').addClass()('expanded');
+		$('span').addClass('hidden');
+		$('.container , .toggle').addClass('close');
+	}
+	
 }());

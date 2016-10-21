@@ -365,14 +365,11 @@ Main Components
 .cd-section:nth-of-type(2) > div {
   background-color: rgb(12,162,186);
 }
-.cd-section:nth-of-type(3) > div {
-  /*background-color: ##D6EFFF;*/
-}
 .cd-section:nth-of-type(4) > div {
-  background-color: #fcb052;
+  background-color: #80BD01;
 }
 .cd-section:nth-of-type(5) > div {
-  background-color: #f06a59;
+  background-color: #D57744;
 }
 .cd-section:nth-of-type(6) > div {
   background-color: #22C3AA;
