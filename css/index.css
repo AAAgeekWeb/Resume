@@ -265,7 +265,11 @@ body {
   -webkit-transition: all 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
 }
-.info .ss-style-boxes {
+.info .fs {
+  position: relative;
+  bottom: 80px;
+}
+.info .fs .ss-style-boxes {
   position: absolute;
   background-image: linear-gradient(to right, #0ca2ba 50%, #2c3e50 50%);
   background-size: 130px 100%;
@@ -274,7 +278,7 @@ body {
   left: 0;
   width: 100%;
 }
-.info .footAdd {
+.info .fs .footAdd {
   position: absolute;
   height: 1em;
   width: 100%;
@@ -295,57 +299,63 @@ body {
   font-weight: bold;
   margin-top: 20px;
 }
-.cd-section .skill {
+.skill {
   height: 100%;
   width: 100%;
   background-color: #d7dbdb;
 }
-.cd-section .skill #circleText {
+.skill .skillContainer {
+  width: 1360px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.skill #circleText {
   width: 450px;
   height: 450px;
   position: absolute;
   left: 5%;
   top: 23%;
 }
-.cd-section .skill .skillLIst {
+.skill .skillLIst {
   width: 60%;
   position: absolute;
   right: -5%;
   top: 25%;
 }
-.cd-section .skill .skillLIst ul.list li {
+.skill .skillLIst ul.list li {
   list-style: circle;
   font-size: 14px;
   line-height: 20px;
   color: #181C26;
   margin-left: 20px;
 }
-.cd-section .skill .skillLIst .tech-skill-list__item {
+.skill .skillLIst .tech-skill-list__item {
   position: relative;
   margin-bottom: 20px;
 }
-.cd-section .skill .skillLIst .tech-skill-list__item-html-and-css {
+.skill .skillLIst .tech-skill-list__item-html-and-css {
   width: 80%;
 }
-.cd-section .skill .skillLIst .tech-skill-list__item-javascript {
+.skill .skillLIst .tech-skill-list__item-javascript {
   width: 70%;
 }
-.cd-section .skill .skillLIst .tech-skill-list__item-bs {
+.skill .skillLIst .tech-skill-list__item-bs {
   width: 60%;
 }
-.cd-section .skill .skillLIst .tech-skill-list__item-java {
+.skill .skillLIst .tech-skill-list__item-java {
   width: 55%;
 }
-.cd-section .skill .skillLIst .tech-skill-list__item-ajax {
+.skill .skillLIst .tech-skill-list__item-ajax {
   width: 45%;
 }
-.cd-section .skill .skillLIst .tech-skill-list__item-sql {
+.skill .skillLIst .tech-skill-list__item-sql {
   width: 40%;
 }
-.cd-section .skill .skillLIst .tech-skill-list__item-photoshop {
+.skill .skillLIst .tech-skill-list__item-photoshop {
   width: 30%;
 }
-.cd-section .skill .skillLIst .tech-skill-list__item__name {
+.skill .skillLIst .tech-skill-list__item__name {
   height: 40px;
   line-height: 40px;
   padding-left: 10px;
@@ -355,17 +365,17 @@ body {
   background-color: #fff6dd;
   border-color: #fdbc40;
 }
-.cd-section .skill .skillLIst .tech-skill-list__item--practised .tech-skill-list__item__name {
+.skill .skillLIst .tech-skill-list__item--practised .tech-skill-list__item__name {
   color: #6e9c0f;
   background-color: #eaf6d0;
   border-color: #80bd01;
 }
-.cd-section .skill .skillLIst .tech-skill-list__item--mastered .tech-skill-list__item__name {
+.skill .skillLIst .tech-skill-list__item--mastered .tech-skill-list__item__name {
   color: #2a7da9;
   background-color: #d6efff;
   border-color: #3498db;
 }
-.cd-section .skill .skillLIst .tech-skill-list__item__detail {
+.skill .skillLIst .tech-skill-list__item__detail {
   position: absolute;
   left: 150px;
   top: 12px;
@@ -378,15 +388,15 @@ body {
   display: none;
 }
 @media (max-width: 749px) {
-  .cd-section .skill .skillLIst .tech-skill-list__item {
+  .skill .skillLIst .tech-skill-list__item {
     margin-bottom: 15px;
   }
 }
 @media (min-width: 750px) {
-  .cd-section .skill .skillLIst .tech-skill-list__item {
+  .skill .skillLIst .tech-skill-list__item {
     margin-bottom: 20px;
   }
-  .cd-section .skill .skillLIst .tech-skill-list__item:hover .tech-skill-list__item__detail {
+  .skill .skillLIst .tech-skill-list__item:hover .tech-skill-list__item__detail {
     display: block;
   }
 }
@@ -667,22 +677,28 @@ body {
   width: 100%;
   height: 100%;
 }
+.contactMe .contactContainer {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  position: absolute;
+}
 .contactMe #myVideo {
   border: 5px solid #5F9EA0;
   padding: 3px;
   height: 70%;
-  left: 10%;
+  float: left;
   margin-top: 30px;
   margin-left: 5%;
 }
 .contactMe .lxfs {
-  position: absolute;
-  right: 8%;
+  float: left;
+  position: relative;
   border: 5px solid #5F9EA0;
+  margin-top: 30px;
   width: 23%;
   height: 70%;
   color: #181C26;
-  top: 150px;
 }
 .contactMe .lxfs header {
   font-size: 30px;

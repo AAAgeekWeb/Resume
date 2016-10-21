@@ -269,22 +269,27 @@ body {
         }
     }
     // 长城
-    .ss-style-boxes {
-        position: absolute;
-        background-image: linear-gradient(to right, #0ca2ba 50%, #2c3e50 50%);
-        background-size: 130px 100%;
-        bottom: 1em;
-        height: 2.5em;
-        left: 0;
-        width: 100%;
-    }
-    .footAdd {
-        position: absolute;
-        height: 1em;
-        width: 100%;
-        bottom: 0;
-        left: 0;
-        background: #2c3e50;
+    .fs {
+        //      width: 1360px;
+        position: relative;
+        bottom: 80px;
+        .ss-style-boxes {
+            position: absolute;
+            background-image: linear-gradient(to right, #0ca2ba 50%, #2c3e50 50%);
+            background-size: 130px 100%;
+            bottom: 1em;
+            height: 2.5em;
+            left: 0;
+            width: 100%;
+        }
+        .footAdd {
+            position: absolute;
+            height: 1em;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            background: #2c3e50;
+        }
     }
 }
 // 主标题与副标题
@@ -302,10 +307,16 @@ body {
     margin-top: 20px;
 }
 //技能掌握
-.cd-section .skill {
+.skill {
     height: 100%;
     width: 100%;
     background-color: #d7dbdb;
+    .skillContainer {
+        width: 1360px;
+        height: 100%;
+        margin: 0 auto;
+        position: relative;
+    }
     #circleText {
         width: 450px;
         height: 450px;
@@ -679,24 +690,30 @@ body {
 .contactMe {
     width: 100%;
     height: 100%;
+    .contactContainer {
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+        position: absolute;
+    }
     // 视频
     #myVideo {
         border: 5px solid #5F9EA0;
         padding: 3px;
         height: 70%;
-        left: 10%;
+        float: left;
         margin-top: 30px;
         margin-left: 5%;
     }
     // 联系方式
     .lxfs {
-        position: absolute;
-        right: 8%;
+        float: left;
+        position: relative;
         border: 5px solid #5F9EA0;
+        margin-top: 30px;
         width: 23%;
         height: 70%;
         color: #181C26;
-        top: 150px;
         header {
             font-size: 30px;
             width: 100%;
